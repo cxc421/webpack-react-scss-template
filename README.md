@@ -4,7 +4,7 @@
 - `npm start`: Start a hot-moudule-replacement environment wiith JS & SCSS
 - `npm build`: Build release files.  
 
-#### ToDos:
+#### To-Do:
 
 - css autoprefixer
 - js dynamic import
