@@ -2,6 +2,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  resolve: {
+    modules: [path.resolve(__dirname, '../src'), 'node_modules']
+  },  
   module: {
     rules: [
       {
@@ -17,7 +20,18 @@ module.exports = {
           fallback: "style-loader",
           use: ["css-loader", "sass-loader"]
         })
-      }
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
+      }  
     ]
   },
   plugins: [

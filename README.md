@@ -8,6 +8,5 @@
 
 - css autoprefixer
 - js dynamic import
-- static files setup
 - express HMR setup
 
